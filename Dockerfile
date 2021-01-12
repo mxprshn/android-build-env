@@ -12,7 +12,7 @@ ENV JAVA_HOME /usr/lib/jvm/default
 
 # Update distro & download dependencies
 RUN pacman -Sy --noconfirm \
-    && pacman -S unzip jdk-openjdk gradle wget git --noconfirm
+    && pacman -S unzip jdk-openjdk gradle wget git python pip --noconfirm
 
 # Download android sdk tools
 RUN wget -q https://dl.google.com/android/repository/commandlinetools-linux-${SDK_CLI_VERSION}_latest.zip -O ${SDK_CLI_PAHT}.zip \
